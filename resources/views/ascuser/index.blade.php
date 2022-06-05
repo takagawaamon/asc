@@ -1,3 +1,6 @@
+@extends('layouts.app')　　　　　　　　　　　　　　　　　　
+
+@section('content')
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -9,12 +12,16 @@
     <body>
         <h1>全一覧</h1>
         <div class='ascusers'>
-            @foreach ($ascusers as $ascuser)
+            @foreach ($users as $user)
                 <div class='ascusers'>
-                    <h2 class='name'>{{ $ascuser->name }}</h2>
-                    <p class='position'>{{ $ascuser->position }}</p>
+                    <h2 class='name'>
+                        <a href="/ascusers/{{ $user->id }}">{{ $user->name }}</a>
+                    </h2>
+                    <p class='age'></p>
+                    <p class='position'>{{ $user->position }}</p>
                 </div>
             @endforeach
         </div>
     </body>
 </html>
+@endsection

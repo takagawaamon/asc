@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Ascuser;
+use App\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function index(Ascuser $ascuser)
+    public function index(User $user)
     {
-    return view('ascuser/index')->with(['ascusers' => $ascuser->get()]);
+    return view('ascuser/index')->with(['users' => $user->get()]);
     }
     
-    public function show(Ascuser $ascuser)
+    public function show(User $user)
     {
-    return view('ascusers/show')->with(['ascusers' => $ascuser->get()]);
+    return view('ascuser/show')->with(['user' => $user]);
     }
 }

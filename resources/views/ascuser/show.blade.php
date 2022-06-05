@@ -1,3 +1,6 @@
+@extends('layouts.app')　　　　　　　　　　　　　　　　　　
+
+@section('content')
 <!DOCTYPE HTML>
 <html lang="{{ str_replace("_", "-", app()->getLocale()) }}">
     <head>
@@ -10,12 +13,16 @@
     </head>
     <body>
         <h1 class="name">
-            {{ $post->name }}
+            {{ $user->name }}
         </h1>
         <div class="content">
             <div class="content__ascuser">
                 <h3>本文</h3>
-                <p>{{ $post->body }}</p>    
+                <p>{{ $user->body }}</p>  
+                <p class='body'></p>
+                <p class='age'></p>
+                <p class='position_id'></p>
+                <p class='ken_id'></p>
             </div>
         </div>
         <div class="footer">
@@ -23,3 +30,4 @@
         </div>
     </body>
 </html>
+@endsection

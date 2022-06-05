@@ -52,6 +52,70 @@
                                 @enderror
                             </div>
                         </div>
+                        
+                        <div class="form-group row">
+                            <label for="body" class="col-md-4 col-form-label text-md-right">{{ __('Body') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="body" type="body" class="form-control @error('body') is-invalid @enderror" name="body" required autocomplete="current-body">
+
+                                @error('body')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+                        
+                        <div class="form-group row">
+                            <label for="age" class="col-md-4 col-form-label text-md-right">{{ __('Age') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="age" type="number" class="form-control @error('age') is-invalid @enderror" name="age" required autocomplete="current-age">
+
+                                @error('age')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+                        
+                        <div class="form-group row">
+                            <label for="position" class="col-md-4 col-form-label text-md-right">{{ __('Position') }}</label>
+
+                            <div class="col-md-6">
+                                <select id="position" class="form-control @error('position') is-invalid @enderror" name="position" required autocomplete="current-position">
+                                  @foreach($positions as $position)
+                                  <option>{{$position ->  name}}</option>
+                                  @endforeach
+                                </select>
+
+                                @error('position')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+                        
+                        <div class="form-group row">
+                            <label for="ken" class="col-md-4 col-form-label text-md-right">{{ __('Ken') }}</label>
+
+                            <div class="col-md-6">
+                                <select id="ken" class="form-control @error('ken') is-invalid @enderror" name="ken" required autocomplete="current-ken">
+                                  @foreach($kens as $ken)
+                                  <option>{{$ken ->  name}}</option>
+                                  @endforeach
+                                </select>
+
+                                @error('ken')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
 
                         <div class="form-group row">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
