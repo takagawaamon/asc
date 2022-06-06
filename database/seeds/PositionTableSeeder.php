@@ -10,7 +10,7 @@ class PositionTableSeeder extends Seeder
      *
      * @return void
      */
-     public function run()
+    public function run()
     {
         $position_names = [
             'FW',
@@ -25,5 +25,5 @@ class PositionTableSeeder extends Seeder
              ]);
         }
     }
-        
+    
 }

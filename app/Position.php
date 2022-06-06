@@ -10,4 +10,8 @@ class Position extends Model
     {
     return $this->hasMany('App\User');  
     }
+    public function getByPosition(int $limit_count = 20)
+    {
+     return $this->users()->with('position')->orderBy('updated_at', 'DESC')->paginate($limit_count);
+    }
 }
