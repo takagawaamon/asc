@@ -8,6 +8,16 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
+    public function position()
+    {
+    return $this->belongsTo('App\Position');
+    }
+    
+    public function ken()
+    {
+    return $this->belongsTo('App\Ken');
+    }
+    
     use Notifiable;
 
     /**

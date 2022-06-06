@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+                <div class="card-header">{{ __('登録画面') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -54,7 +54,7 @@
                         </div>
                         
                         <div class="form-group row">
-                            <label for="body" class="col-md-4 col-form-label text-md-right">{{ __('Body') }}</label>
+                            <label for="body" class="col-md-4 col-form-label text-md-right">{{ __('自己紹介文') }}</label>
 
                             <div class="col-md-6">
                                 <input id="body" type="body" class="form-control @error('body') is-invalid @enderror" name="body" required autocomplete="current-body">
@@ -68,7 +68,7 @@
                         </div>
                         
                         <div class="form-group row">
-                            <label for="age" class="col-md-4 col-form-label text-md-right">{{ __('Age') }}</label>
+                            <label for="age" class="col-md-4 col-form-label text-md-right">{{ __('年齢') }}</label>
 
                             <div class="col-md-6">
                                 <input id="age" type="number" class="form-control @error('age') is-invalid @enderror" name="age" required autocomplete="current-age">
@@ -87,7 +87,7 @@
                             <div class="col-md-6">
                                 <select id="position" class="form-control @error('position') is-invalid @enderror" name="position" required autocomplete="current-position">
                                   @foreach($positions as $position)
-                                  <option>{{$position ->  name}}</option>
+                                  <option value="{{ $position->id }}">{{$position->name }}</option>
                                   @endforeach
                                 </select>
 
@@ -100,12 +100,12 @@
                         </div>
                         
                         <div class="form-group row">
-                            <label for="ken" class="col-md-4 col-form-label text-md-right">{{ __('Ken') }}</label>
+                            <label for="ken" class="col-md-4 col-form-label text-md-right">{{ __('都道府県') }}</label>
 
                             <div class="col-md-6">
                                 <select id="ken" class="form-control @error('ken') is-invalid @enderror" name="ken" required autocomplete="current-ken">
                                   @foreach($kens as $ken)
-                                  <option>{{$ken ->  name}}</option>
+                                  <option value="{{ $ken->id }}">{{$ken ->name}}</option>
                                   @endforeach
                                 </select>
 
@@ -128,7 +128,7 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
+                                    {{ __('登録') }}
                                 </button>
                             </div>
                         </div>

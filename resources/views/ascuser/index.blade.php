@@ -18,7 +18,7 @@
                         <a href="/ascusers/{{ $user->id }}">{{ $user->name }}</a>
                     </h2>
                     <p class='age'></p>
-                    <p class='position'>{{ $user->position }}</p>
+                    <p class='position_id'>{{ $user->position->name }}</p>
                 </div>
             @endforeach
         </div>

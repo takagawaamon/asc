@@ -17,12 +17,10 @@
         </h1>
         <div class="content">
             <div class="content__ascuser">
-                <h3>本文</h3>
-                <p>{{ $user->body }}</p>  
-                <p class='body'></p>
-                <p class='age'></p>
-                <p class='position_id'></p>
-                <p class='ken_id'></p>
+                <p class='body'>{{ $user->body }}</p>
+                <p class='age'>{{ $user->age}}</p>
+                <p class='position_id'>{{ $user->position->name }}</p>
+                <p class='ken_id'>{{ $user->ken->name }}</p>
             </div>
         </div>
         <div class="footer">
