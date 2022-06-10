@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/ascusers', 'UserController@index');
 Route::get('/', 'UserController@index');
 Route::get('/ascusers/{user}', 'UserController@show');
+Route::get('/users/{user}/edit', 'UserController@edit');
+Route::put('/users/{user}', 'UserController@update');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

@@ -1,17 +1,8 @@
 @extends('layouts.app')　　　　　　　　　　　　　　　　　　
 
 @section('content')
-<!DOCTYPE HTML>
-<html lang="{{ str_replace("_", "-", app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Posts</title>
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-        <link rel="stylesheet" href="/css/app.css">
-    </head>
-    <body>
+
+    
         <h1 class="name">
             選手名：{{ $user->name }}
         </h1>
@@ -26,6 +17,8 @@
         <div class="footer">
             [<a href="/">検索一覧に戻る</a>]
         </div>
-    </body>
-</html>
+        <div class="footer">
+            <p class="edit">[<a href="/users/{{ $user->id }}/edit">こちらで編集ができます</a>]</p>
+        </div>
+    
 @endsection

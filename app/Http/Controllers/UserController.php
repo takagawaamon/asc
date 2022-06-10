@@ -6,6 +6,7 @@ use App\User;
 use App\Position;
 use App\Ken;
 use Illuminate\Http\Request;
+use App\Http\Requests\UserRequest;
 
 
 class UserController extends Controller
@@ -24,4 +25,18 @@ class UserController extends Controller
         'user' => $user
         ]);
     }
+    public function edit(User $user)
+    {
+    return view('ascuser/edit')->with([
+        'user' => $user,
+        ]);
+    }
+    public function update(Request $request, User $user)
+    {
+    $input_user = $request['user'];
+    $user->fill($input_user)->save();
+
+    return redirect('/ascusers/' . $user->id);
+    }
 }
+
