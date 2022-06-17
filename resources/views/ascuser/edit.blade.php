@@ -1,6 +1,7 @@
 @extends('layouts.app')　　　　　　　　　　　　　　　　　　
 
 @section('content')
+>
 <div class="w-100">
     <div class="content w-75 mx-auto bg-white shadow-lg p-3 m-5 rounded justify-center">
          <h1 class="title">編集画面</h1>

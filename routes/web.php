@@ -18,6 +18,8 @@ Route::get('/', 'UserController@index');
 Route::get('/ascusers/{user}', 'UserController@show');
 Route::get('/users/{user}/edit', 'UserController@edit');
 Route::put('/users/{user}', 'UserController@update');
+Route::get('/users/{user}/chat', 'UserController@chat');
+Route::post('/users/chat', 'UserController@store');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

@@ -17,8 +17,15 @@
         <div class="footer">
             [<a href="/">検索一覧に戻る</a>]
         </div>
+        <div class='chats'>
+            <p class="chat">[<a href="/users/{{ $user->id }}/chat">相手の方と連絡を取ることができます</a>]</p>
+        </div>
         <div class="footer">
+            @if(auth::id()===$user->id )
+            <div class="user_id">
             <p class="edit">[<a href="/users/{{ $user->id }}/edit">こちらで編集ができます</a>]</p>
+            </div>
+            @endif
         </div>
     
 @endsection

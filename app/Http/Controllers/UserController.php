@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use App\Position;
 use App\Ken;
+use App\Chat;
 use Illuminate\Http\Request;
 use App\Http\Requests\UserRequest;
 
@@ -38,5 +39,20 @@ class UserController extends Controller
 
     return redirect('/ascusers/' . $user->id);
     }
+    public function chat(User $user)
+    {
+    
+    return view('ascuser/chat')->with([
+        'users' => $user
+        ]);
+    }
+    
+    public function store(Chat $chat, Request $request) 
+    {
+        $input = $request['chat'];
+        $chat->fill($input)->save();
+        return redirect('/users/2/chat' );
+    }
+    
 }
 

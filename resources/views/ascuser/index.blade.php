@@ -1,8 +1,14 @@
 @extends('layouts.app')　　　　　　　　　　　　　　　　　　
 
 @section('content')
-
+<head>
+    <link rel="stylesheet" href="./css/index.css">
+        
+    </iink>
+</head>
+        <div class='comment'>
         <h1>下のリンクからポジションで検索することができます</h1>
+        </div>
         <div class="position">
         [<a href="/positions/1">FW</a>]
         [<a href="/positions/2">MF</a>]

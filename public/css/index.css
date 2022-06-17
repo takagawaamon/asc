@@ -1,0 +1,16 @@
+    body {
+    background-color: #FFFFFF
+         }
+    
+    .position
+    {
+       text-align: center;
+    }
+    .comment{
+        font-size:  100px;    /* 文字サイズ指定 */
+        text-align: center;
+        color:rgba(156, 39, 176, 0.3); /*文字の色の指定 */
+    }
+    .ascusers{
+        text-align: center;
+    }
