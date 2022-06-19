@@ -16,10 +16,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/ascusers', 'UserController@index');
 Route::get('/', 'UserController@index');
 Route::get('/ascusers/{user}', 'UserController@show');
+Route::post('/users/chat', 'UserController@store');
 Route::get('/users/{user}/edit', 'UserController@edit');
 Route::put('/users/{user}', 'UserController@update');
 Route::get('/users/{user}/chat', 'UserController@chat');
-Route::post('/users/chat', 'UserController@store');
+
+//things you should serch later
+// url paremeter priority
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

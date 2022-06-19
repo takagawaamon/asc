@@ -18,6 +18,10 @@ class User extends Authenticatable
     return $this->belongsTo('App\Ken');
     }
     
+    public function chat()
+    {
+    return $this->belongsTo('App\chat');
+    }
     use Notifiable;
 
     /**
@@ -46,4 +50,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    public function getPaginateByLimit(int $limit_count = 20)
+    {
+    // updated_atで降順に並べたあと、limitで件数制限をかける
+    return $this->orderBy('updated_at', 'DESC')->paginate($limit_count);
+    }
+    
 }

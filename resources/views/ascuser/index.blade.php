@@ -17,11 +17,12 @@
         [<a href="/">全ポジション</a>]
         </div>
         <div class='ascusers'>
+            <h2>選手一覧</h2>
             @foreach ($users as $user)
                 <div class='ascusers'>
-                    <h2 class='name'>
+                    <h3 class='name'>
                         選手名:<a href="/ascusers/{{ $user->id }}">{{ $user->name }}</a>
-                    </h2>
+                    </h3>
                     <p class='age'></p>
                     <p class='position_id'>希望ポジション：{{ $user->position->name }}</p>
                     

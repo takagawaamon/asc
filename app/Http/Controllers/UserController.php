@@ -39,19 +39,24 @@ class UserController extends Controller
 
     return redirect('/ascusers/' . $user->id);
     }
-    public function chat(User $user)
+    public function chat(User $user,Chat $chat)
     {
+        //dd($chat->get());
+        $chats=$chat->getPaginateByLimit();
     
     return view('ascuser/chat')->with([
-        'users' => $user
+        'users' => $user,
+        'chats' => $chats
+        
         ]);
     }
     
-    public function store(Chat $chat, Request $request) 
+    public function store(Chat $chat, Request $request, User $user)  
     {
         $input = $request['chat'];
         $chat->fill($input)->save();
-        return redirect('/users/2/chat' );
+        
+        return redirect('/users/' . $chat->recievename.'/chat');
     }
     
 }

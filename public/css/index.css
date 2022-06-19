@@ -1,6 +1,9 @@
     body {
-    background-color: #FFFFFF
-         }
+    background-image: url(https://static.wixstatic.com/media/e94e18_e5fecd6119b049d486eef98c8686b897~mv2_d_4032_3024_s_4_2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    }
     
     .position
     {
@@ -9,8 +12,9 @@
     .comment{
         font-size:  100px;    /* 文字サイズ指定 */
         text-align: center;
-        color:rgba(156, 39, 176, 0.3); /*文字の色の指定 */
+        color:#000000 /*文字の色の指定 */
     }
     .ascusers{
         text-align: center;
+         text-shadow: 1px 1px 1px #ff9800, -1px 1px 1px #ff9800, 1px -1px 1px #ff9800, -1px -1px 1px #ff9800, 1px 1px 1px #ff9800, -1px 1px 1px #ff9800, 1px -1px 1px #ff9800, -1px -1px 1px #ff9800;
     }

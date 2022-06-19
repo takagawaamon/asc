@@ -2,7 +2,9 @@
 
 @section('content')
 
-    
+        <head>
+            <link href="{{ asset('css/show.css') }}" rel="stylesheet">
+        </head>
         <h1 class="name">
             選手名：{{ $user->name }}
         </h1>

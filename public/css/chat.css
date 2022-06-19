@@ -1,0 +1,29 @@
+.myuser{
+       opacity:0;
+       }
+.title{
+       text-align: center;
+       position: relative;
+       padding: 8px 15px;
+       margin-left: 40px;
+       background: #def3ff;
+       border-radius: 20px;
+}
+.chat{
+       text-align: center;
+}
+.submit{
+        text-align: center;
+        padding: 20px 0px 20px 0px; /*「padding:上 右 下 左」の順で指定*/
+}
+.back{
+       text-align: center;
+       
+}
+.body{
+        text-align: center;
+        
+}
+.select{
+       text-align: center;
+}
