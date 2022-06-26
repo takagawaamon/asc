@@ -1,14 +1,18 @@
 @extends('layouts.app')
 
+<link rel="stylesheet" href="/css/register.css">
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
+                <div class=title>
                 <div class="card-header">{{ __('登録画面') }}</div>
+                </div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                         @csrf
 
                         <div class="form-group row">
@@ -124,7 +128,16 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
+                        
+                        <div class="form-group row">
+                            <label for="icon_path" class="col-md-4 col-form-label text-md-right">{{ __('icon') }}</label>
 
+                            <div class="col-md-6">
+                                <input id="icon_path" type="file" name="icon_path" accept="image/" required autocomplete="icon_path">
+                            </div>
+                        </div>
+
+                    <div class=button>
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
@@ -132,6 +145,7 @@
                                 </button>
                             </div>
                         </div>
+                    </div>    
                     </form>
                 </div>
             </div>

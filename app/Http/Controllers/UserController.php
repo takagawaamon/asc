@@ -34,20 +34,21 @@ class UserController extends Controller
     }
     public function update(Request $request, User $user)
     {
-    $input_user = $request['user'];
-    $user->fill($input_user)->save();
-
-    return redirect('/ascusers/' . $user->id);
+        
+        $input_user = $request['user'];
+        $user->fill($input_user)->save();
+    
+        return redirect('/ascusers/' . $user->id);
     }
     public function chat(User $user,Chat $chat)
     {
+
         //dd($chat->get());
         $chats=$chat->getPaginateByLimit();
     
     return view('ascuser/chat')->with([
         'users' => $user,
         'chats' => $chats
-        
         ]);
     }
     

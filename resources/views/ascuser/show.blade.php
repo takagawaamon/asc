@@ -1,13 +1,14 @@
 @extends('layouts.app')　　　　　　　　　　　　　　　　　　
 
+@section('head')
+    <link rel="stylesheet" href="/css/show.css">
+@endsection
 @section('content')
 
-        <head>
-            <link href="{{ asset('css/show.css') }}" rel="stylesheet">
-        </head>
         <h1 class="name">
             選手名：{{ $user->name }}
         </h1>
+        <img src=" {{ $user->icon_path }}">
         <div class="content">
             <div class="content__ascuser">
             <p class='body'>自己紹介文：{{ $user->body }}</p>

@@ -1,11 +1,10 @@
-@extends('layouts.app')　　　　　　　　　　　　　　　　　　
+@extends('layouts.app')
+
+@section('head')
+    <link rel="stylesheet" href="/css/index.css">
+@endsection
 
 @section('content')
-<head>
-    <link rel="stylesheet" href="./css/index.css">
-        
-    </iink>
-</head>
         <div class='comment'>
         <h1>下のリンクからポジションで検索することができます</h1>
         </div>
@@ -23,6 +22,7 @@
                     <h3 class='name'>
                         選手名:<a href="/ascusers/{{ $user->id }}">{{ $user->name }}</a>
                     </h3>
+                   <img src=" {{ $user->icon_path }}">
                     <p class='age'></p>
                     <p class='position_id'>希望ポジション：{{ $user->position->name }}</p>
                     

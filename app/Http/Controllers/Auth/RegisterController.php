@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use Storage;
 use App\Providers\RouteServiceProvider;
 use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -65,6 +66,11 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $image = $data["icon_path"];
+        
+        $path = Storage::disk('s3')->putFile('myprefix', $image, 'public');
+        $image_path = Storage::disk('s3')->url($path);
+ 
         
         return User::create([
             'name' => $data['name'],
@@ -74,6 +80,7 @@ class RegisterController extends Controller
             'position_id' => $data['position'],
             'ken_id' => $data['ken'],
             'age' => $data['age'],
+            'icon_path'=> $image_path
         ]);
     }
 }
