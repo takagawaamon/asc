@@ -6,6 +6,7 @@ use App\User;
 use App\Position;
 use App\Ken;
 use App\Chat;
+use Storage;
 use Illuminate\Http\Request;
 use App\Http\Requests\UserRequest;
 
@@ -16,7 +17,7 @@ class UserController extends Controller
     {
     
     return view('ascuser/index')->with([
-        'users' => $user->get()
+        'users' => $user->getPaginateByLimit()
         ]);
     }
     
@@ -34,9 +35,21 @@ class UserController extends Controller
     }
     public function update(Request $request, User $user)
     {
+        $user_input = $request['user'];
+        $image = $user_input['icon_path'];
+        //$image = $request->file('image');
+        //dd($image);
+        
+        $path = Storage::disk('s3')->putFile('myprefix', $image, 'public');
+        $image_path = Storage::disk('s3')->url($path);
         
         $input_user = $request['user'];
+        //dd($input_user);
+        $input_user['icon_path'] = $image_path;
+        //dd($input_user);
+        
         $user->fill($input_user)->save();
+        
     
         return redirect('/ascusers/' . $user->id);
     }
@@ -59,6 +72,8 @@ class UserController extends Controller
         
         return redirect('/users/' . $chat->recievename.'/chat');
     }
+    
+       
     
 }
 

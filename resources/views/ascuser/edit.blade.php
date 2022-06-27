@@ -8,7 +8,7 @@
 <div class="w-100">
     <div class="content w-75 mx-auto bg-white shadow-lg p-3 m-5 rounded justify-center">
          <h1 class="title">編集画面</h1>
-        <form action="/users/{{ $user->id }}" method="POST">
+        <form action="/users/{{ $user->id }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
             <div class=body>
@@ -52,6 +52,15 @@
             　　</div>
             </div>
             </div>
+            
+            <div class="form-group row">
+                <label for="icon_path" class="col-md-4 col-form-label text-md-right">{{ __('icon') }}</label>
+
+                <div class="col-md-6">
+                    <input id="icon_path" type="file" name="user[icon_path]" accept="image/">
+                </div>
+            </div>
+            
             <div class=button>
             <input type="submit" value="保存">
             </div>

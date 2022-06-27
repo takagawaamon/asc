@@ -22,12 +22,18 @@
                     <h3 class='name'>
                         選手名:<a href="/ascusers/{{ $user->id }}">{{ $user->name }}</a>
                     </h3>
-                   <img src=" {{ $user->icon_path }}">
+                <div class=icon>    
+                    <img src=" {{ $user->icon_path }}">
+                </div>    
                     <p class='age'></p>
                     <p class='position_id'>希望ポジション：{{ $user->position->name }}</p>
                     
                 </div>
             @endforeach
+        </div>
+        
+        <div style='text-align:center'>
+             {{ $users->links('vendor.pagination.bootstrap-4') }}
         </div>
     
 @endsection

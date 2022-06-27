@@ -133,7 +133,7 @@
                             <label for="icon_path" class="col-md-4 col-form-label text-md-right">{{ __('icon') }}</label>
 
                             <div class="col-md-6">
-                                <input id="icon_path" type="file" name="icon_path" accept="image/" required autocomplete="icon_path">
+                                <input id="icon_path" type="file" name="icon_path" accept="image/">
                             </div>
                         </div>
 

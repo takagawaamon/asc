@@ -28,3 +28,9 @@
     .chat{
         text-align: center;
     }
+    
+    .icon{
+        text-align: center;
+        padding: 20px 0px 0px 0px; /*「padding:上 右 下 左」の順で指定*/
+        
+    }

@@ -28,14 +28,15 @@
                     <div style="text-align:left">
                        <div class="message">
                           <p>{{ $chat->message}}:</p>
+                        </div>  
                              {{ $chat->updated_at}}
-                       </div>
+                       
                     </div>　
                    @endif
               @endforeach
               
                <div style='text-align:center'>
-                  {{ $chats->links() }}
+                  {{ $chats->links('vendor.pagination.bootstrap-4') }}
                </div>
          <!--end chat zone-->
         
@@ -45,6 +46,14 @@
                 @csrf
                     <div class="body">
                         <textarea name="chat[message]" placeholder="メッセージ"></textarea>
+                       <div class=select>
+                        <select id="user" class="form-control @error('user') is-invalid @enderror" name="chat[sendname]" required autocomplete="current-user">
+                                <option value="{{ Auth::user()->id }}">{{Auth::user()->name}}</option>
+                        </select>        
+                        <select id="user" class="form-control @error('user') is-invalid @enderror" name="chat[recievename]" required autocomplete="current-user">
+                                <option value="{{ $users->id }}">{{$users->name}}</option>  
+                        </select> 
+                        </div>
                     </div>
                     <div class='submit'>
                        <input type="submit" value="送信"/>
@@ -75,7 +84,7 @@
                     <div class="myuser">
                       <p>送信先のアカウントを選択してください</p> 
                     <select id="user" class="form-control @error('user') is-invalid @enderror" name="chat[recievename]" required autocomplete="current-user">
-                         <option value="{{ $users->id }}">{{$users->name}}</option>
+                            <option value="{{ $users->id }}">{{$users->name}}</option>
                     </select>
                 　　</div>
                 </div>
