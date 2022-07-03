@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('head')
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="{{ secure_asset('css/index.css') }}">
 @endsection
 
 @section('content')

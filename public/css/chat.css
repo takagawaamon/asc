@@ -23,6 +23,7 @@
 .body{
         text-align: center;
         
+        
 }
 .select{
        text-align: center;
@@ -39,4 +40,20 @@
 }
 .select{
        opacity:0;
+}
+
+.bg_pattern {
+       position: fixed;
+       top: 0;
+       left: 0;
+       width: 100vw;
+       height: 100vh;
+       background-color: #FFFFFF;
+       opacity: 0.4;
+       z-index: -1;
+}
+.Lines {
+       background-size: 40px 40px;
+       background-image:  repeating-linear-gradient(0deg, #FFFFFF, #FFFFFF 2px, #00FF7F 2px, #00FF7F);
+
 }

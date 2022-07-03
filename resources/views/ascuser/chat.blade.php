@@ -1,11 +1,14 @@
 @extends('layouts.app')　　　　　　　　　　　　　　　　　　
 
 @section('head')
-    <link rel="stylesheet" href="/css/chat.css">
+    <link rel="stylesheet" href="{{ secure_asset('/css/chat.css') }}">
 @endsection
 
 @section('content')
     <body>
+        
+        	
+<div class="bg_pattern Lines"></div><!--背景デザイン-->
         
         <p class='title'>
             チャット
@@ -17,6 +20,10 @@
                         <div class="interact">
                           <a>{{Auth::user()->name}}</a>
                           <div class="message">
+                            <div class=icon>    
+                                <img src=" {{ Auth::user()->icon_path }}" height="50px">
+                                
+                            </div>
                           <p>{{ $chat->message}}</p>
                           </div>
                         　<a> {{ $chat->updated_at}}</a>  
@@ -27,6 +34,9 @@
                    <a>{{$users->name}}</a>
                     <div style="text-align:left">
                        <div class="message">
+                           <div class=icon>    
+                                <img src=" {{ $users->icon_path }}" height="50px">
+                            </div>
                           <p>{{ $chat->message}}:</p>
                         </div>  
                              {{ $chat->updated_at}}
