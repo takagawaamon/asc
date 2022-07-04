@@ -1,0 +1,59 @@
+.myuser{
+       opacity:0;
+       }
+.title{
+       text-align: center;
+       position: relative;
+       padding: 8px 15px;
+       margin-left: 40px;
+       background: #def3ff;
+       border-radius: 20px;
+}
+.chat{
+       text-align: center;
+}
+.submit{
+        text-align: center;
+        padding: 20px 0px 20px 0px; /*「padding:上 右 下 左」の順で指定*/
+}
+.back{
+       text-align: center;
+       
+}
+.body{
+        text-align: center;
+        
+        
+}
+.select{
+       text-align: center;
+}
+
+.message{
+       font-weight: bold;
+}
+.page{
+       text-align: center;
+}
+.interact{
+       padding: 20px 50px 20px 50px; /*「padding:上 右 下 左」の順で指定*/
+}
+.select{
+       opacity:0;
+}
+
+.bg_pattern {
+       position: fixed;
+       top: 0;
+       left: 0;
+       width: 100vw;
+       height: 100vh;
+       background-color: #FFFFFF;
+       opacity: 0.4;
+       z-index: -1;
+}
+.Lines {
+       background-size: 40px 40px;
+       background-image:  repeating-linear-gradient(0deg, #FFFFFF, #FFFFFF 2px, #00FF7F 2px, #00FF7F);
+
+}

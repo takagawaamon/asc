@@ -1,0 +1,56 @@
+    .name{
+           position: relative;
+           color: #6eb0f9;
+           line-height: 1.4;
+           -webkit-box-reflect: below -10px -webkit-linear-gradient(top,rgba(0,0,0,0),rgba(0,0,0,0) 10%,rgba(0, 0, 0, 0.6));
+           text-align: center;
+           
+           }
+    .body{
+           text-align: center;
+           padding: 20px 0px 0px 0px; /*「padding:上 右 下 左」の順で指定*/
+          }
+    .age{
+         text-align: center;
+         }
+    .position_id{
+        text-align: center;
+    }
+    .ken_id{
+        text-align: center;
+    }
+    .footer{
+        text-align: center;
+    }
+    .edit{
+        text-align: center;
+    }
+    .chat{
+        text-align: center;
+    }
+    
+    .icon{
+        text-align: center;
+        padding: 20px 0px 0px 0px; /*「padding:上 右 下 左」の順で指定*/
+        
+    }
+    
+    body{
+        background-image: url(https://static.wixstatic.com/media/e94e18_e5fecd6119b049d486eef98c8686b897~mv2_d_4032_3024_s_4_2.jpg);
+        background-size:  cover;/* 画像のサイズ指定 */
+        background-position: center;
+        /*width: 100vw;*/
+        background-repeat: no-repeat;
+    }
+     /*画像の大きさ設定*/
+    img {
+     max-width: 100%;
+     max-height: 100%;
+    }
+    .icon {
+     height: 200px;
+     width: 200px;
+     /*画像の中央ぞろえ*/
+     margin-left : auto;
+     margin-right: auto;
+    }

@@ -1,0 +1,32 @@
+    body {
+      width: 100vw;
+      height: 100vh;
+      background-image:repeating-conic-gradient(green  ,white 50%);
+    }
+    
+    .position
+    {
+       text-align: center;
+    }
+    .comment{
+        font-size:  100px;    /* 文字サイズ指定 */
+        text-align: center;
+        color:#000000 /*文字の色の指定 */
+    }
+    .ascusers{
+        text-align: center;
+         text-shadow: 1px 1px 1px #ff9800, -1px 1px 1px #ff9800, 1px -1px 1px #ff9800, -1px -1px 1px #ff9800, 1px 1px 1px #ff9800, -1px 1px 1px #ff9800, 1px -1px 1px #ff9800, -1px -1px 1px #ff9800;
+    }
+    
+    /*画像の大きさ設定*/
+    img {
+     max-width: 100%;
+     max-height: 100%;
+    }
+    .icon {
+     height: 200px;
+     width: 200px;
+     /*画像の中央ぞろえ*/
+     margin-left : auto;
+     margin-right: auto;
+    }
