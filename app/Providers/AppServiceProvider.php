@@ -26,14 +26,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-         if (Schema::hasTable('positions')) {
-            $positions = Position::all();
-            view()->share('positions', $positions);
-        }
-        
-        if (Schema::hasTable('kens')) {
-            $kens = Ken::all();
-            view()->share('kens', $kens);
-        }
+       
     }
 }
