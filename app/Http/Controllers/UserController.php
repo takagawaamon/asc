@@ -13,6 +13,8 @@ use App\Http\Requests\UserRequest;
 
 class UserController extends Controller
 {
+
+    
     public function index(User $user)
     {
     
@@ -29,8 +31,13 @@ class UserController extends Controller
     }
     public function edit(User $user)
     {
+        $positions = Position::all();
+        $kens = Ken::all();
+        
     return view('ascuser/edit')->with([
         'user' => $user,
+        'positions'=>$positions,
+        'kens'=>$kens
         ]);
     }
     public function update(Request $request, User $user)

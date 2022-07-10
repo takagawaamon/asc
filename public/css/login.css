@@ -7,3 +7,15 @@
 .button{
     text-align: center;
 }
+body{
+        background-image: url(https://ascgazou.s3.ap-northeast-1.amazonaws.com/myprefix/Z4iu8Tqq8r8VBlNNeq9ZKDWytea8zkBcEFwZAI28.jpg);
+        background-size:  cover;/* 画像のサイズ指定 */
+        background-position: center;
+        /*width: 100vw;*/
+        background-repeat: no-repeat;
+    }
+     /*画像の大きさ設定*/
+    img {
+     max-width: 100%;
+     max-height: 100%;
+    }

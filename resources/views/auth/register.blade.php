@@ -92,7 +92,13 @@
                                 @enderror
                             </div>
                         </div>
+                        @php
+                        use App\Position;
+                        use App\Ken;
                         
+                        $positions = Position::all();
+                        $kens = Ken::all();
+                        @endphp
                         <div class="form-group row">
                             <label for="position" class="col-md-4 col-form-label text-md-right">{{ __('Position') }}</label>
 
